@@ -1,14 +1,14 @@
 CC = g++
-NAME = megaphone
+NAME = phonebook
 FLAGS = -Wall -Wextra -Werror
-FILE = megaphone.cpp
+FILE = phonebook.cpp
 
 all: $(NAME)
 	@echo "Creating the program..."
 $(NAME):
 	@$(CC) $(FLAGS) $(FILE) -o $(NAME)
-re: clean all
-	
 clean:
-	@echo "Removing the program..."
+	@echo "Deleting the program..."
 	@rm $(NAME)
+re: clean all
+
