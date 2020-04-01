@@ -24,14 +24,19 @@ class		phonebooks
 	public:
 		contact contacts[8];
 		contact	add_contact(contact add);
-		void	display_contacts(contact display);
+		void	display_contact(contact display, int index);
 };
+
+void	truncat_data(std::string str);
+void	display_info(contact display);
 
 int		main()
 {
-	std::string value;
+	std::string		value;
+	int			i;
+	int			y;
+	int			index;
 	
-	int  i;
 	i = -1;
 	phonebooks *phonebook = new phonebooks();	
 	while (1)
@@ -41,8 +46,19 @@ int		main()
 		if (value == "ADD" && ++i < 8)
 			phonebook->contacts[i] = phonebook->add_contact(phonebook->contacts[i]);
 		else if (value == "SEARCH")
-			phonebook->display_contacts(contacts);
-		else if (value == "EXIT")
+		{
+			y = -1;
+			while (++y < 8)
+				phonebook->display_contact(phonebook->contacts[y], y + 1);
+			std::cout << "Which contact would you like to display: " << std::endl;
+			std::cin >> index;
+			if (index < 1 && index > 8)
+				std::cout << "This index doesn't." << std::endl;
+			else
+				display_info(phonebook->contacts[index - 1]);
+
+		}
+			else if (value == "EXIT")
 		{
 			std::cout << "Exiting the program..." << std::endl;
 			delete phonebook;
@@ -84,14 +100,45 @@ contact		phonebooks::add_contact(contact add)
 	return (add);
 }
 
-void		display_contacts(contact display)
+void	phonebooks::display_contact(contact display, int index)
 {
-	int	i;
+	if (!display.first_name.empty())
+	{
+		std::cout << "Index     |First Name|Last Name |Nickname  |" << std::endl;
+		std::cout << index << "         |";
+		truncat_data(display.first_name);
+		truncat_data(display.last_name);
+		truncat_data(display.nickname);
+		std::cout << std::endl;
+	}
+}
 
-	i = -1;
-	while (++i < 8)
-		if (display[i].first_name)
-		{
+void	truncat_data(std::string str)
+{
+	if (str.length() > 10)
+		str[9] = '.';
+	std::cout << str.substr(0,10);
+	if (str.length() < 10)
+		std::cout << std::string(10 - str.length(), ' ');
+	std::cout << '|';
+}
 
-		}
+void	display_info(contact display)
+{
+	if (!display.first_name.empty())
+	{
+		std::cout << "First name: " << display.first_name << std::endl;
+		std::cout << "Last name: " << display.last_name << std::endl;
+		std::cout << "Nickname :" << display.nickname << std::endl;
+		std::cout << "Login :" << display.login << std::endl;
+		std::cout << "Postal address :" << display.postal_addr << std::endl;
+		std::cout << "Email address :" <<  display.email_addr << std::endl;
+		std::cout << "Phone number :" << display.phone_nbr << std::endl;
+		std::cout << "Birthday date :" << display.bday_date << std::endl;
+		std::cout << "Favorite meal :" << display.fav_meal << std::endl;
+		std::cout << "Underwear color :" << display.under_col << std::endl;
+		std::cout << "Darkess secret :" << display.dark_secret << std::endl;
+	}
+	else
+		std::cout << "An error occured, please try another command." << std::endl;
 }
