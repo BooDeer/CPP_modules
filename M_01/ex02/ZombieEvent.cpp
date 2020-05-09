@@ -19,7 +19,8 @@ Zombie* ZombieEvent::newZombie(std::string name) {
 	return (newZombie);
 }
 void	ZombieEvent::randomChump(void) {
-	
+
+	srand(time(0));	
 	std::string passione[6] = { "Giorno Giovanna" , "Bruno Bucciarati", "Narancia Ghirga", "Leone Abbacchio", "Guido Mista", "Trish Una"};
 	Zombie *chumpChump = ZombieEvent::newZombie(passione[rand()%(6)]);
 	chumpChump->announce();
