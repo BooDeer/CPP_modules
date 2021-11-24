@@ -6,14 +6,14 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:22:41 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/23 17:08:29 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/11/24 07:28:09 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.class.hpp"
 #include <string>
 #include <iomanip>
-
+#include <sstream>
 /*
 class		contact
 {
@@ -161,12 +161,7 @@ std::string	truncat_data(std::string str)
 }
 
 PhoneBook::PhoneBook( void ) {
-	std::cout << "[PhoneBook class constructor]" << std::endl;
 	this->_i = 0;
-}
-
-PhoneBook::~PhoneBook( void ) {
-	std::cout << "[PhoneBook class destructor]" << std::endl;
 }
 
 void PhoneBook::addContact( void )
@@ -198,7 +193,7 @@ void PhoneBook::addContact( void )
 void	PhoneBook::showContacts( void )
 {
 	int	index = 0;
-	int	pos_int;
+	int	pos_int = 0;
 	std::string	pos;
 
 	std::cout << std::setw(10) << "index";
@@ -221,9 +216,9 @@ void	PhoneBook::showContacts( void )
 	}
 	std::cout << "Selected the desired contact to show details: ";
 	std::getline(std::cin, pos);
-	pos_int = std::stoi(pos);
-	if (pos_int > 8 || pos_int < 0)
-		std::cout << pos << " is an incorrect output." << std::endl;
+	pos.empty() ? pos_int = -999 : pos_int = std::stoi(pos);
+	if (pos_int > 7 || pos_int < 0)
+		std::cout << pos << "Invalid index" << std::endl;
 	else
 	{
 		std::cout << "First Name      :" << this->Contacts[pos_int].getFn() << std::endl;

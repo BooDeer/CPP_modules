@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:22:00 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/23 10:19:21 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:20:33 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class PhoneBook {
 		int	_i; // Index of current contact to fill.
   public:
     PhoneBook( void ); // Constructor
-    ~PhoneBook( void );	// Destructor
 	void	addContact( void ); // fill input data in the (i) contact
 	void	showContacts( void );
 	Contact	Contacts[8];
