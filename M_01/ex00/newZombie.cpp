@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 09:58:47 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/26 11:56:55 by hboudhir         ###   ########.fr       */
+/*   Created: 2021/11/26 10:41:50 by hboudhir          #+#    #+#             */
+/*   Updated: 2021/11/26 11:45:09 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main( void )
+Zombie* newZombie(std::string name)
 {
-	Zombie* zombie;
-	zombie = newZombie("BooDeer");
-	zombie->announce();
-	randomChump("Big chungus");
-	delete zombie;
+	return (new Zombie(name));
 }
