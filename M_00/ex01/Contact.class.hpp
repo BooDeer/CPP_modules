@@ -6,16 +6,13 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 07:30:50 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/23 17:04:51 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/11/26 09:47:22 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_CLASS_HPP
 # define CONTACT_CLASS_HPP
 
-
-
-// #include "PhoneBook.class.hpp"
 #include <iostream>
 
 class Contact {
