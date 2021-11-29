@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:21:31 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/26 18:05:49 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:21:31 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main( void )
 /*
 int a = 21;
 int* aPTR = &a;
-int& aREF = a; // v
+int& aREF = a; // 
 
 aREF = a; // x
 ==> a = 21
