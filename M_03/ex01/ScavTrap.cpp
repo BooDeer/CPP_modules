@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: boodeer <boodeer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 11:30:56 by boodeer           #+#    #+#             */
-/*   Updated: 2021/12/02 21:34:22 by boodeer          ###   ########.fr       */
+/*   Created: 2021/12/02 21:46:21 by boodeer           #+#    #+#             */
+/*   Updated: 2021/12/02 22:04:39 by boodeer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
- int main( void )
- {
-	ClapTrap instance1("Instance I");
-	ClapTrap instance2("Instance II");
+ScavTrap::ScavTrap ( void )
+{
+	std::cout << "[ScavTrap] Default constractor" << std::endl;
+}
 
-	instance1.attack("Instance 2");
-	instance2.takeDamage(200);
-	instance2.beRepaired(200);
-	return (0);
- }
+ScavTrap::ScavTrap(const ScavTrap& src)
+{
+	std::cout << "[ScavTrap] Copy constructor called" << std::endl;
+	*this = src;
+}
+
+ScavTrap::~ScavTrap( void )
+{
+	std::cout << "[ScavTrap] Destructor called" << std::endl;
+}
