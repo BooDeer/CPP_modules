@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: boodeer <boodeer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 11:30:44 by boodeer           #+#    #+#             */
-/*   Updated: 2021/12/10 11:24:46 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/02 22:04:12 by boodeer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10)
 {
 	std::cout << "Parametre constructor called" << std::endl;
 }
+
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
 	std::cout << "Copy constructor called" << std::endl;
@@ -78,7 +79,3 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& rhs)
 }
 
 /* ========================================== */
-// classX x
-/*
-	
-*/

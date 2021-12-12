@@ -25,4 +25,5 @@ class ClapTrap {
 	private:
 	};
 
+
 #endif
