@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 08:39:02 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/12/07 18:31:17 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:10:02 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ bool	Fixed::operator!=(Fixed const& rhs) const
 {
 	return (this->getRawBits() != rhs.getRawBits());
 }
-
+// ==> >= != == <= < =
 Fixed	Fixed::operator+(Fixed const& rhs) const
 {
 	return ( Fixed(this->toFloat() + rhs.toFloat()) );
@@ -111,7 +111,7 @@ Fixed	Fixed::operator++()
 {
 		
 }
-
+// .getVarx() 
 /* ======================================== */
 
 /* Methods */

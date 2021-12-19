@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 11:57:11 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/23 10:45:54 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/18 10:30:45 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 int	main(int ac, char **av)
 {
 	std::string tmp;
-	
+
 	if (ac == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else

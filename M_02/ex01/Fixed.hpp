@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 08:39:11 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/30 17:31:55 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/02 07:23:36 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ class	Fixed {
 		int					_fp;
 };
 
-std::ostream & operator<<( std::ostream & o,  Fixed const& rhs);
+std::ostream& operator<<( std::ostream& o,  Fixed const& rhs);
 #endif

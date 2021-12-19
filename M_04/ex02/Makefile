@@ -1,7 +1,7 @@
 CC = clang++
-NAME = Demystified
+NAME = itTastesPurple
 FLAGS = -std=c++98 -Wall -Wextra -Werror
-FILE = main.cpp
+FILE = main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp
 
 all: $(NAME)
 	@echo "Creating the program..."
