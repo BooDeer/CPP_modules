@@ -1,5 +1,5 @@
 CC = clang++
-NAME = itTastesPurple
+NAME = Bureaucrat
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 FILE = main.cpp Bureaucrat.cpp
 
