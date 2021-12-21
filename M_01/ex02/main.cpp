@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:21:31 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/11/26 18:21:31 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/21 16:39:58 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main( void )
 	std::string* stringPTR = &str;
 	std::string& stringREF = str;
 	
-	(void)stringPTR;
 	std::cout << "Address of the string using [str]       : " << &str << std::endl;
 	std::cout << "Address of the string using [stringREF] : " << &stringREF << std::endl;
 	std::cout << "Address of the string using [stringPTR] : " << stringPTR << std::endl;
@@ -26,6 +25,8 @@ int main( void )
 	std::cout << "[str] value using [stringREF]  : " << stringREF << std::endl;
 	std::cout << "[str] value using [stringPTR]  : " << *stringPTR << std::endl << std::endl;
 }
+
+
 /*
 int a = 21;
 int* aPTR = &a;

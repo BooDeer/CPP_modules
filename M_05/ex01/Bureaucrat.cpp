@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 20:11:05 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/12/20 18:03:25 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/20 21:35:59 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,3 +87,13 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("The given grade is too high");
 }
+
+/*
+
+class Animal{
+	// animal attributes.
+};
+
+class Cat: public Animal{// animal attributes + cat attributes};
+class Dog: public Animal{// animal attributes + dog attributes};
+*/
