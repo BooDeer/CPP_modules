@@ -13,7 +13,8 @@ class Data
 		~Data( void );
 		Data(const Data& src);
 		Data& operator=(const Data& rhs);
-		void			publicMemberFunction( void );
+		void	getData( void ) const;
+		void	setData(int i, std::string str);
 };
 
 #endif

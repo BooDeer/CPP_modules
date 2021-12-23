@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 16:58:41 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/12/23 17:20:12 by hboudhir         ###   ########.fr       */
+/*   Updated: 2021/12/23 18:26:05 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,15 @@ Data& Data::operator=(const Data& rhs)
 	return *this;
 }
 
-void	Data::publicMemberFunction( void ){}
+void	Data::getData( void ) const
+{
+	std::cout << "1- " << _somePrivateData << std::endl;
+	std::cout << "2- " << _anotherPrivateData << std::endl;
+	return ;
+}
+
+void	Data::setData(int i, std::string str)
+{
+	_somePrivateData = i;
+	_anotherPrivateData = str;
+}
