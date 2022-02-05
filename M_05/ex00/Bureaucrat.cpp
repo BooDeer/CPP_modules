@@ -6,7 +6,7 @@
 /*   By: hboudhir <hboudhir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 20:11:05 by hboudhir          #+#    #+#             */
-/*   Updated: 2021/12/20 18:03:25 by hboudhir         ###   ########.fr       */
+/*   Updated: 2022/02/05 11:43:23 by hboudhir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,3 +87,9 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("The given grade is too high");
 }
+
+/*
+
+Important, destructor is called after an exeception has been thrown: 
+	https://stackoverflow.com/questions/8311457/are-destructors-called-after-a-throw-in-c
+*/
