@@ -12,9 +12,15 @@ class Array
 		Array( unsigned int N );
 		Array( const Array& src );
 		Array<T>&	operator=( const Array& rhs );
-		T			operator[](int index) const;
-		T&			operator[](int index);
+		// T			operator[](const int index) const;
+		T&			operator[](const int index);
+		size_t		size( void ) const;
 		~Array( void );
+		class OutBoundariesException: public std::exception
+		{
+
+			virtual const char* what() const throw();
+		};
 	protected:
 
 	private:
@@ -37,10 +43,11 @@ Array<T>& Array<T>::operator=( const Array& rhs )
 {
 	if ( this != &rhs )
 	{
-		this->_arr = new T[rhs->_arrayLen];
-		for (int i = 0; i < rhs->_arrayLen; i++)
+		this->_arrayLen = rhs._arrayLen;
+		this->_arr = new T[rhs._arrayLen];
+		for (size_t i = 0; i < rhs._arrayLen; i++)
 		{
-			this->_arr[i] = rhs._arr[i];
+			this->_arr[i] = T(rhs._arr[i]);
 		}
 	}
 	return *this;
@@ -60,14 +67,26 @@ Array<T>::Array( unsigned int N ): _arrayLen(N)
 }
 
 template <typename T>
-T	Array<T>::operator[](const int index) const
+const char* Array<T>::OutBoundariesException::what() const throw()
 {
-	if (index >= 0 && index < _arrayLen)
+	return ("The given index is out of boundaries.");
+}
+
+template <typename T>
+T&	Array<T>::operator[](const int index)
+{
+	if (index >= 0 && index < static_cast<int>(_arrayLen))
 	{
 		return _arr[index];
 	}
 	else
-		throw std::exception();
+		throw Array<T>::OutBoundariesException();
+}
+
+template <typename T>
+size_t	Array<T>::size( void ) const
+{
+	return _arrayLen;
 }
 
 /* Setter version of the operator [] */

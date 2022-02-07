@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME):
 ifeq ($(UNAME_S),Linux)
 	g++ $(FLAGS) $(FILE) -o $(NAME)
-else ifeq ($(UNAME_S), Darwing) # must check the correct one for school.
+else ifeq ($(UNAME_S), Darwin) # must check the correct one for school.
 	clang++ $(FLAGS) $(FILE) -o $(NAME)
 endif
 
