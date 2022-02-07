@@ -3,17 +3,30 @@
 #include <iostream>
 #include <vector>
 
-template <typename T>
-bool	easyfind(T container, int i)
+class OccurrenceNotFoundException: public std::exception
 {
-	T::iterator itrB;
-	T::iterator itrE;
+	virtual const char* what() const throw()
+	{
+		return "Element not found in the array";
+	}
+};
+
+template <typename T>
+int	easyfind(T container, int i)
+{
+	typename T::iterator itrB;
+	typename T::iterator itrE;
+	int			index = 0;
 
 	itrB = container.begin();
 	itrE = container.end();
 
 	for (itrB = container.begin(); itrB != container.end(); itrB++)
+	{
+		index++;
 		if (*itrB == i)
-			return true;
-	return false;
+			return index;
+	}
+	throw ::OccurrenceNotFoundException();
+	return -1;
 }	
